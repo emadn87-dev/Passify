@@ -1,0 +1,15 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #f8f9fa;
+    }
+
+    .app-container {
+        background-color: #1e1e1e;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .password-display {
+        background-color: #2c2c2c;
+    }
+}

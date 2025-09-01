@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <title>Passify</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="styles/main.css" />
+        <link rel="stylesheet" href="styles/responsive.css" />
+        <link rel="stylesheet" href="styles/dark-mod.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Vazirmatn:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="app-container">
+            <header class="app-header">
+                <a
+                    href="https://github.com/emadn87-dev/Passify"
+                    target="_blank"
+                    class="github-link"
+                >
+                    <i class="fab fa-github"></i>
+                </a>
+                <h1><i class="fas fa-lock"></i> Passify</h1>
+                <p class="subtitle">Generate strong passwords</p>
+            </header>
+
+            <main class="password-generator">
+                <div class="password-display">
+                    <div class="password-field" id="passwordDisplay"></div>
+                    <button
+                        class="copy-btn"
+                        id="copyBtn"
+                        title="Copy to clipboard"
+                    >
+                        <i class="far fa-copy"></i>
+                    </button>
+                </div>
+
+                <div class="controls">
+                    <div class="length-control">
+                        <label for="length"
+                            >Password Length:
+                            <span id="lengthValue">8</span></label
+                        >
+                        <input
+                            type="range"
+                            id="length"
+                            min="8"
+                            max="24"
+                            value="8"
+                        />
+                    </div>
+
+                    <div class="character-options">
+                        <div class="option">
+                            <input
+                                type="checkbox"
+                                id="includeUppercase"
+                                checked
+                            />
+                            <label for="includeUppercase"
+                                >Uppercase Letters (A-Z)</label
+                            >
+                        </div>
+                        <div class="option">
+                            <input
+                                type="checkbox"
+                                id="includeLowercase"
+                                checked
+                            />
+                            <label for="includeLowercase"
+                                >Lowercase Letters (a-z)</label
+                            >
+                        </div>
+                        <div class="option">
+                            <input
+                                type="checkbox"
+                                id="includeNumbers"
+                                checked
+                            />
+                            <label for="includeNumbers">Numbers (0-9)</label>
+                        </div>
+                        <div class="option">
+                            <input
+                                type="checkbox"
+                                id="includeSymbols"
+                                checked
+                            />
+                            <label for="includeSymbols">Symbols (!@#$%)</label>
+                        </div>
+                    </div>
+
+                    <button class="generate-btn" id="generateBtn">
+                        <i class="fas fa-sync-alt"></i> Generate Password
+                    </button>
+                </div>
+            </main>
+
+            <footer class="app-footer">
+                <p>Your passwords are generated locally and never stored</p>
+            </footer>
+        </div>
+
+        <div class="notification" id="notification"></div>
+
+        <script src="scripts/main.js"></script>
+    </body>
+</html>

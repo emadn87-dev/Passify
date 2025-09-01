@@ -1,0 +1,240 @@
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3f37c9;
+    --accent-color: #4895ef;
+    --dark-color: #1b263b;
+    --light-color: #f8f9fa;
+    --success-color: #4cc9f0;
+    --danger-color: #f72585;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --main-font: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+body {
+    background-color: #f0f2f5;
+    color: var(--dark-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 400px;
+    max-height: 90vh;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-header {
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--secondary-color)
+    );
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.github-link {
+    position: absolute;
+    left: 1rem;
+    top: 23%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 2rem;
+    opacity: 0.8;
+    transition: var(--transition);
+}
+
+.github-link:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+    color: var(--light-color);
+}
+
+.app-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.app-header .subtitle {
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+.password-generator {
+    padding: 1.5rem;
+}
+
+.password-display {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    background-color: var(--light-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.password-field {
+    flex-grow: 1;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-family: 'Courier New', monospace;
+    word-break: break-all;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.copy-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0 1.2rem;
+    height: 60px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.copy-btn i {
+    font-size: 1.2rem;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.length-control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.length-control label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.length-control input[type='range'] {
+    width: 100%;
+    height: 8px;
+    -webkit-appearance: none;
+    background: #e0e0e0;
+    border-radius: 4px;
+    outline: none;
+}
+
+.length-control input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.length-control input[type='range']::-webkit-slider-thumb:hover {
+    background: var(--secondary-color);
+}
+
+.character-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.option input[type='checkbox'] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.generate-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.generate-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.app-footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #666;
+    border-top: 1px solid #eee;
+}
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--dark-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.notification.show {
+    opacity: 1;
+}
