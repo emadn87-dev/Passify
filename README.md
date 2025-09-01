@@ -7,7 +7,7 @@ A modern password generator built with HTML, CSS, and JavaScript.
 Experience the site live at 👉 [Demo Link](#) (Coming Soon)
 
 ## Demo Preview 📸  
-![Password Generator Demo](#)  
+![Password Generator Demo](/Assets/images/screenshot.png)  
 
 ## Description 📝  
 SecurePass Generator is a responsive web application that creates strong, random passwords based on user preferences. It features:
