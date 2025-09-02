@@ -4,7 +4,7 @@ A modern password generator built with HTML, CSS, and JavaScript.
 
 ## 🚀 Live Demo
 
-Experience the site live at 👉 [Demo Link](#) (Coming Soon)
+Experience the site live at 👉 [Click me](https://passify-emadn87-dev.netlify.app)
 
 ## Demo Preview 📸  
 ![Password Generator Demo](/Assets/images/screenshot.png)  
