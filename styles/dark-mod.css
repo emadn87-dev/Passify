@@ -1,15 +1,27 @@
+:root {
+    --dark-bg: linear-gradient(
+        90deg,
+        rgba(36, 41, 79, 1) 0%,
+        rgba(39, 57, 145, 1) 50%,
+        rgba(23, 24, 133, 1) 100%
+    );
+    --dark-container: #1e1e1e;
+    --dark-password-display: #2c2c2c;
+    --dark-text: #f8f9fa;
+}
+
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #121212;
-        color: #f8f9fa;
+        background: var(--dark-bg);
+        color: var(--dark-text);
     }
 
     .app-container {
-        background-color: #1e1e1e;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        background-color: var(--dark-container);
+        box-shadow: 0 0 1rem 0.4rem rgba(0, 0, 0, 0.3);
     }
 
     .password-display {
-        background-color: #2c2c2c;
+        background-color: var(--dark-password-display);
     }
 }

@@ -1,4 +1,10 @@
 :root {
+    --back-color: linear-gradient(
+        90deg,
+        rgba(67, 97, 238, 1) 0%,
+        rgba(140, 151, 255, 1) 50%,
+        rgba(148, 150, 255, 1) 100%
+    );
     --primary-color: #4361ee;
     --secondary-color: #3f37c9;
     --accent-color: #4895ef;
@@ -20,7 +26,7 @@
 }
 
 body {
-    background-color: #f0f2f5;
+    background: var(--back-color);
     color: var(--dark-color);
     line-height: 1.6;
     min-height: 100vh;
